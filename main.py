@@ -1,25 +1,17 @@
-def menu_Inicial():
-  print('Programa para conversão de Temperatura')
-  print('1. - Converter Celcius para Fahrenthi')
-  print('2. - Converter Fahrenthi para Celcius ')
+print('Seu triangulo e tipos')
 
-  def cel_far():
-    C = float(input('Insira a Temperatura em Celsius '))
-    F = C * ( 9 / 2 ) + 32
-    print('Valor em Fahrenheit: {0}°F'.format(F))
+#variaveis
+a = float(input('Lado A:  '))
+b = float(input('Lado B:  '))
+c = float(input('Lado C:  '))
 
+#teste dos triangulos
 
-    def fahr_cel():
-      F = float(input('Entre com a temperatura em graus Fahrenheit: '))
-      C = (F - 32) * (5 / 9)
-      print('Valor em Celsius: {0}°C'.format(C))
-
-      if __name__=='__main__':
-        menu_inicial()
-        escolha = input('Escolha o tipo de conversão que deseja realizar: ')
-
-      if escolha == '1':
-        cel_fahr()
-
-      if escolha == '2':
-        fahr_cel()
+if (a + b < c) or (a + c < b) or (b + c < a):
+        print('Nao é um triangulo')
+elif (a == b) and (a == c):
+        print('Equilatero')
+elif (a==b) or (a==c) or (b==c):
+        print('Isósceles')
+else:
+        print('Escaleno')
